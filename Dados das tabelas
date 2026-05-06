@@ -1,0 +1,36 @@
+USUARIO:
+- ID
+- Nome
+- CPF
+- Email
+- Senha
+- Setor
+- Tipo de usuario (adm, usuario)
+
+PRODUTOS:
+- ID
+- Nome
+- Tipo
+
+ENDEREÇO:
+- ID
+- Codigo
+- Capacidade Maxima
+- Capacidade minima
+- Status (livre / ocupado)
+
+LOTE:
+- ID
+- Quantidade
+- Data de entrada
+- Data de saida
+- Validade
+- Endereço
+
+MOVIMENTAÇÂO:
+- ID
+- Tipo (entrada / saida)
+- Quantidade
+- Data
+- Endereço de entrada
+- Endereço de saida
