@@ -34,3 +34,31 @@ MOVIMENTAÇÂO:
 - Data
 - Endereço de entrada
 - Endereço de saida
+
+
+
+
+create table empresas(
+  id_empresa int primary key auto_increment,
+  nome_empresa varchar(150) not null unique,
+  cnpj varchar(14) int not null unique,
+  email_empresa varchar(100) not null unique,
+  senha_empresa varchar(10) not null,
+  rua_empresa (----------------- CONTINUAR --------------)
+  
+)
+
+
+create table usuarios(
+  id_usuario int primary key auto_increment,
+  nome_usuario varchar(100) not null,
+  cpf_usuario varchar(8) not null unique,
+  email_usuario varchar(50) not null unique,
+  senha_usuario varchar(10) not null,
+  setor_usuario varchar(50) not null, //talvez enum
+  tipo_usuario enum("Funcionario", "Administrador"),
+  empresa_id int not null,
+  
+  foreign key (empresa_id) references empresas(id_empresa)
+  
+)
